@@ -1,0 +1,40 @@
+{
+  "deals": [
+    {
+      "name": "Demo Academy",
+      "value_gbp": 45000,
+      "stage": "proposal",
+      "days_since_activity": 9
+    },
+    {
+      "name": "Synthetic Supplier",
+      "value_gbp": 22000,
+      "stage": "discovery",
+      "days_since_activity": 2
+    }
+  ],
+  "leads": [
+    {
+      "name": "Test Customer A",
+      "days_since_activity": 6
+    },
+    {
+      "name": "Test Customer B",
+      "days_since_activity": 1
+    }
+  ],
+  "reps": [
+    {
+      "name": "Alex",
+      "calls": 14,
+      "emails": 31,
+      "meetings": 5
+    },
+    {
+      "name": "Sam",
+      "calls": 11,
+      "emails": 22,
+      "meetings": 4
+    }
+  ]
+}
