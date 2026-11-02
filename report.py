@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 def build_report(data):
-    deals = [d for d in data["deals"] if d["stage"] != "won"]
+    deals = [d for d in data["deals"] if d["stage"] not in ("won", "lost")]
     pipeline = sum(d["value_gbp"] for d in deals)
     stale = [d for d in deals if d["days_since_activity"] >= 7]
     leads = [x for x in data["leads"] if x["days_since_activity"] >= 4]
