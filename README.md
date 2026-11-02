@@ -1,9 +1,27 @@
-# Sales Intelligence & Rep Activity Reporting
+# Sales Intelligence & Rep Activity Tracker
 
-**Independent demonstration with fictional CRM data.** Generates a deterministic pipeline/meeting summary showing open deals, follow-up priorities and rep activity. No company systems or personal customer data are included.
+> **Offline demonstration** using fictional CRM opportunities, leads and sales representative activity. Not a replica of an employer's internal reporting bots.
 
-Run: `python report.py` (Python 3.10+, no packages). The report prints as Markdown to stdout.
+This small Python application generates a readable weekly sales meeting brief showing open pipeline, deals needing attention, leads without recent follow-up and rep activity totals.
 
-This minimal published version is **offline** and does not make an xAI/Grok API request. The professionally deployed Grok-powered reporting workflow described in the candidate's CV is separate from this synthetic demonstration.
+## Run
+Requires Python 3.10+, standard library only.
 
-Potential extensions: secured CRM connector, optional xAI API summarization, scheduled delivery, RBAC and approval workflow.
+```bash
+python report.py
+python -m unittest discover -s tests -v
+```
+
+## What the demo covers
+- Open pipeline calculations, excluding deals marked won or lost
+- Deals with no activity for at least 7 days
+- Leads with no activity for at least 4 days
+- Calls, emails and meetings by rep
+- Four automated tests and GitHub Actions CI
+
+All monetary values, contacts and performance figures in `sample_crm.json` are fictional.
+
+## Next steps
+Add a permissioned HubSpot/CRM adapter, durable snapshots, scheduled report delivery and reviewed AI-generated commentary.
+
+**Important distinction:** The code currently published here **does not call Grok**. The title reflects the professional project theme; an optional xAI/Grok integration is a future extension, not a demonstrated feature in this repository. Never upload confidential CRM data or API keys.
